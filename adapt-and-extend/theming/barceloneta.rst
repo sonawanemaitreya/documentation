@@ -13,8 +13,12 @@ Although it reuses some of the structure and good practices of the original Boot
 Structure
 =========
 
-Barceloneta uses `LESS <http://lesscss.org/>`_ as a pre-processor to generate the resultant stylesheet.
-The LESS resources live in the `plonetheme.barceloneta egg <https://github.com/plone/plonetheme.barceloneta/tree/master/plonetheme/barceloneta/theme/less>`_ in the ``plonetheme/barceloneta/theme/less`` directory::
+Barceloneta uses `LESS <http://lesscss.org/>`_ as a pre-processor to generate the
+resultant stylesheet.
+
+The LESS resources live in the `plonetheme.barceloneta egg <https://github.com/plone/plonetheme.barceloneta/tree/master/plonetheme/barceloneta/theme/less>`_ in the ``plonetheme/barceloneta/theme/less`` directory
+
+.. code-block:: bash
 
     plonetheme/barceloneta/theme/less
     ├── accessibility.plone.less
@@ -78,22 +82,32 @@ The LESS resources live in the `plonetheme.barceloneta egg <https://github.com/p
     ├── variables.plone.less
     └── views.plone.less
 
-They are divided by base styling, layout, function, components and views, so they could be easily reusable and extended from other themes.
+They are divided by base styling, layout, function, components and views, so they
+could be easily reusable and extended from other themes.
+
 The main LESS resource that imports all the others is ``barceloneta.plone.less``.
 
-It has a set of LESS variables that can be overriden either through the web using the `Theming control panel <http://docs.plone.org/external/plone.app.theming/docs/index.html#using-the-control-panel>`_ or by reusing it in your own theme.
+It has a set of LESS variables that can be overriden either through the web using
+the `Theming control panel <http://docs.plone.org/external/plone.app.theming/docs/index.html#using-the-control-panel>`_
+or by reusing it in your own theme.
+
 They include colors, sizes, fonts and other useful parameters.
 
-Barceloneta makes use of the new `Diazo bundle <http://docs.plone.org/adapt-and-extend/theming/resourceregistry.html#id26>`_ to expose its resources to Plone using the Resource Registries.
+Barceloneta makes use of the new `Diazo bundle <http://docs.plone.org/adapt-and-extend/theming/resourceregistry.html#id26>`_
+to expose its resources to Plone using the Resource Registries.
+
 As it is a pure Diazo theme, it keeps a low profile being Plone agnostic and only containing the theme itself.
 
 Changes from previous versions of Plone
 =======================================
 
-Regarding markup and comparing to the previous versions of Plone, Barceloneta introduced lots of changes in the default Plone markup to modernize it and make it more accessible.
+Regarding markup and comparing to the previous versions of Plone, Barceloneta introduced lots of changes
+In the default Plone markup to modernize it and make it more accessible.
 There are few parts of rendering Plone that were not updated.
 
-However, any class or id that was stripped away from Plone was done with the purpose of making upgrades and adaptations of existing Diazo themes easy.
+However, any class or id that was stripped away from Plone was done with the purpose
+of making upgrades and adaptations of existing Diazo themes easy.
+
 Whenever possible additional classes and ids were introduced being always domain namespaced ``plone-*``.
 
 Register LESS resources profile
@@ -142,7 +156,10 @@ You can develop a custom Diazo based theme and use the Barceloneta theme only fo
         </rules>
     </rules>
 
-You can define your own Diazo bundle (JavaScript and Less/CSS) in your manifest.cfg file by using the options ``development-js``, ``production-js``, ``development-css`` and ``production-css``. This bundle will not be included in the backend theme.
+You can define your own Diazo bundle (JavaScript and Less/CSS) in your manifest.cfg file
+by using the options ``development-js``, ``production-js``, ``development-css`` and ``production-css``.
+
+This bundle will not be included in the backend theme.
 
 
 Current issues
@@ -182,9 +199,9 @@ How this works
 Inheriting a new theme from Barceloneta
 ---------------------------------------
 
-.. note:: based on `Customize Plone 5 default theme on the fly <http://datakurre.pandala.org/2015/05/customize-plone-5-default-theme-on-fly.html>`_ by Asko Soukka.
+.. note:: Based on `Customize Plone 5 default theme on the fly <http://datakurre.pandala.org/2015/05/customize-plone-5-default-theme-on-fly.html>`_ by Asko Soukka.
 
-If you do not want to build a complete theme from scratch, you can use Barceloneta and just make small changes.
+If you do not want to build a complete theme from scratch, you can use Barceloneta and make small changes.
 
 Create a new theme in the theming editor containing the following files:
 
