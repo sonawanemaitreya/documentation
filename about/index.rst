@@ -1,10 +1,16 @@
 ========================
-About this documentation
+About This Documentation
 ========================
 
-.. toctree::
-    :maxdepth: 2
+.. admonition:: Contents
 
+   This section describes general guidelines for documentation contributors.
+
+.. toctree::
+   :maxdepth: 2
+   contributing/index
+
+<below old>
     contributing
     documentation_styleguide
     rst-styleguide
