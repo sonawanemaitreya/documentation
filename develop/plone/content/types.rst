@@ -2,9 +2,9 @@
 Content types
 =============
 
-.. admonition:: Description
+.. topic:: Description
 
-	Plone's content type subsystems and creating new content types programmatically.
+   Plone's content type subsystems and creating new content types programmatically.
 
 
 Introduction
